@@ -1,21 +1,30 @@
-using System.Diagnostics.Metrics;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace week2
+namespace week3
 {
     public partial class Form1 : Form
-    {int Ctr = 0;
-        
+    {
         public Form1()
-        {            
-
+        {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            comboBox1.Items.Add("item" + Ctr);
-            Ctr+=1;
-
+            label1.Text = dateTimePicker1.Value.ToShortDateString();
         }
     }
 }
